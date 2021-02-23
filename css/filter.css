@@ -1,0 +1,27 @@
+main {
+    display: grid;
+    grid-template-areas: ". . ." ". items ." ". . .";
+    grid-template-columns: 5% auto 5%;
+    grid-template-rows: 6% auto 100px;
+    grid-column-gap: 0;
+    background-color: var(--bg-color2);
+}
+
+.items {
+    grid-area: items;
+    background-color: var(--bg-color1);
+    height: 800px;
+    box-shadow: 0px 5px 15px 0px rgba(110, 54, 0, 0.15);
+
+    display: grid;
+    grid-template-areas: "filter" "boxes";
+    grid-template-rows: 6% auto;
+}
+
+#filter {
+    grid-area: filter;
+}
+
+#boxes {
+    grid-area: boxes;
+}
