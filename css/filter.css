@@ -55,6 +55,15 @@ main {
     border-bottom: var(--color-3) 3px solid;
 }
 
+.selected > a > img {
+    color: black;
+}
+
+.selected > a > span {
+    color: black;
+    font-family: var(--h2-font-family);
+}
+
 #boxes {
     grid-area: boxes;
 }
