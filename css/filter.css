@@ -67,3 +67,15 @@ main {
 #boxes {
     grid-area: boxes;
 }
+
+article {
+    display: flex;
+    flex-direction: column;
+    max-width: 19vw;
+}
+
+#flex-boxes {
+    display: flex;
+    place-content: space-evenly;
+    flex-wrap: wrap;
+}
