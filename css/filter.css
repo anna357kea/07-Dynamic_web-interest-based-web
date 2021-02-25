@@ -5,22 +5,17 @@ html {
 
 main {
     display: grid;
-    grid-template-areas: ". . ." ". items ." ". . .";
-    grid-template-columns: 5% auto 5%;
-    grid-template-rows: 6% auto 100px;
-    grid-column-gap: 0;
+    grid-template-columns: 15% auto 15%;
+    grid-template-rows: 50px 40px auto 50px;
     background-color: var(--bg-color2);
 }
 
 .items {
     grid-area: items;
-    background-color: var(--bg-color1);
-    height: 800px;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    background-color: white;
     box-shadow: 0px 5px 15px 0px rgba(110, 54, 0, 0.15);
-
-    display: grid;
-    grid-template-areas: "filter" "boxes";
-    grid-template-rows: 7% auto;
 }
 
 #filter {
@@ -43,7 +38,7 @@ main {
     font-family: var(--p-font-family);
     color: var(--color-4);
     font-size: 1.1rem;
-    padding-top: 0.7rem;
+    padding-top: 1rem;
     padding-bottom: 0.7rem;
 }
 
@@ -71,8 +66,12 @@ main {
 article {
     display: flex;
     flex-direction: column;
-    max-width: 19vw;
-    margin-bottom: 4rem;
+    width: 250px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    margin-top: 10px;
 }
 
 #flex-boxes {
@@ -80,4 +79,65 @@ article {
     place-content: space-evenly;
     flex-wrap: wrap;
     margin-top: 3%;
+}
+
+h4 {
+    font-family: var(--h4-font-family);
+    color: var(--color-1);
+    opacity: 0.8;
+    text-align: center;
+    padding-top: 1rem;
+    font-size: 0.8rem;
+}
+
+h3 {
+    font-family: var(--h3-font-family);
+    color: rgb(16, 163, 172);
+    text-align: center;
+    padding-top: 1rem;
+}
+
+p {
+    font-family: var(--p-font-family);
+    max-width: 20rem;
+    padding-top: 0.7rem;
+    font-size: 0.9rem;
+    color: black;
+    opacity: 0.8;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-bottom: 1rem;
+    line-height: 1.4;
+}
+
+article a {
+    color: var(--button-color);
+    font-family: var(--p-font-family);
+    justify-self: center;
+
+    margin-top: 0.8rem;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+article a:hover {
+    color: var(--button-color-hover);
+}
+
+.filter_item {
+    font-size: 14px;
+}
+
+#filter > ul > li > a > div > img.icon_gap {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+@media (max-width: 480px) {
+    main {
+        grid-template-columns: 5% auto 5%;
+    }
 }
