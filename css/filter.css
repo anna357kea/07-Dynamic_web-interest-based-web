@@ -72,10 +72,12 @@ article {
     display: flex;
     flex-direction: column;
     max-width: 19vw;
+    margin-bottom: 4rem;
 }
 
 #flex-boxes {
     display: flex;
     place-content: space-evenly;
     flex-wrap: wrap;
+    margin-top: 3%;
 }
